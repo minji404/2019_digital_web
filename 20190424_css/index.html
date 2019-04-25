@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>css</title>
+	<style>
+		*{color: black;}
+		h1{color: red;}
+		p{color: orange;}
+		#text01{color: skyblue;}
+		.text02{color: pink;}
+		li{color: darkblue;}
+		input[type="text"]{background-color: red;}
+		input[type="password"]{background-color: blue;}
+	</style>
+</head>
+<body>
+	<!-- h1>lorem2^p>lorem10 -->
+	<!-- (h1>lorem2)+(p>lorem10) -->
+	<h1>Lorem ipsum.</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, provident.</p>
+	<h1>Lorem ipsum.</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, quos.</p>
+	<p id="text01" class="text02">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ipsum assumenda voluptatem ratione culpa doloremque, quibusdam voluptatibus possimus, obcaecati nobis?</p>
+	<p class="text02">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ipsum assumenda voluptatem ratione culpa doloremque, quibusdam voluptatibus possimus, obcaecati nobis?</p>
+
+	<!-- p#han>lorem10 -->
+	<p id="han">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, corrupti.</p>
+
+	<!-- p.box>lorem10 -->
+	<p class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, repellendus.</p>
+	<!-- a[href="http://www.naver.com"]>lorem2 -->
+	<a href="http://www.naver.com">Lorem ipsum.</a>
+	<!-- input[type="text"] -->
+	<input type="text">
+	<!-- ul>li*4>lorem2 -->
+	<ul id="list_wrap">
+		<li class="text02" style="color: red">Lorem ipsum.</li> <!--style="color: red"-스타일태그 어트리뷰트 ,클래스도 어트리뷰트-->
+		<li>Labore, blanditiis.</li>
+		<li class="text02">Commodi, non.</li>
+		<li>Provident, in!</li>
+	</ul>
+	<form>
+		<input type="text">
+		<input type="password">
+	</form>
+</body>
+</html>
