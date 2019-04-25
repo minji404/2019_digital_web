@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+		img[src$="png"]{border: 3px solid red;}
+		img[src$="jpg"]{border: 2px solid blue;}
+	</style>
+</head>
+<body>
+	<img src="phone1.png" alt=""><br>
+	<img src="phone2.png" alt=""><br>
+	<img src="view01.jpg" alt="">
+
+	<style>/*자손 후손 선택자*/
+		div>h1{color: red;}
+		div h1{color: blue;}	
+/*<!--부등호 없어두됨, 포커즈형태로 아래로 내려가서 아래있는 블루가 적용됨-->*/
+		div>h2{color: skyblue;}
+		div h2{color: gray;}     
+
+		div>ul>li{color: orange;}
+		div li{color: orange;}
+
+		div#list_wrap>h1{color: red;}
+		div#list_wrap h1{color: red;}	
+/*<!--부등호 없어두됨, 포커즈형태로 아래로 내려가서 아래있는 블루가 적용됨-->*/
+		div#list_wrap>h2{color: red;}
+		div#list_wrap h2{color: red;}     
+
+		div#list_wrap>ul>li{color: red;}
+		div#list_wrap li{color: red;}
+	</style>
+		<div>
+		<h1>abc</h1>
+		<h2>def</h2>
+			<!-- div>ul>li*3>lorem2 -->
+		<ul>
+			<li>Lorem ipsum.</li>
+			<li>Quod, dolores.</li>
+			<li>Vel, atque.</li>
+		</ul>
+	</div>
+	<div id="list_wrap">
+		<h1>abc</h1>
+		<h2>def</h2>
+			<!-- div>ul>li*3>lorem2 -->
+		<ul>
+			<li>Lorem ipsum.</li>
+			<li>Quod, dolores.</li>
+			<li>Vel, atque.</li>
+		</ul>
+	</div>
+	<!-- (h1>{header})+(h2*4>{header}) -->
+	<style>
+		/*h1+h2{color: blue;}h1다음의 h2스타일이 블루로 될꺼임*/
+		h1~h2{color: blue;}/*h1을 제외한 나머지가 블루로 될꺼임->동일선택자*/
+		/*마우스를 영역에 놨을때 반응해주는것 문서를 읽고 실행함-> 호버*/
+		h2:hover{color: white; background-color:black;cursor: pointer;}
+		h2:active{background-color: red;}
+		input:focus{background-color:skyblue; }
+		/*인풋은 태그명*/
+	</style>
+	<h1>header1</h1>
+	<h2>header2</h2>
+	<h2>header3</h2>
+	<h2>header4</h2>
+	<h2>header5</h2>
+	<form>
+		<input type="text">
+		<input type="text">
+	</form>
+	<!-- 젠코딩할 때 뒤에 쩜씀 d연습해야됨 -->
+	<!-- ul.child>li*5>{menu$} -->
+	<!-- 위에 유엘이 많아서 클래스 이름을 붙여줌  -->
+	<!-- ul#child>li*5 -->
+	<!-- 아이디일땐 샵 -->
+	<!-- <ul id="child">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul> -->
+	<style>
+		/*ul>li:first-child{background-color:red;}*/
+		/*ul>li:last-child{background-color:skyblue;}*/
+		ul.child>li:nth-child(2n){background-color:red;}
+		ul.child>li:nth-child(2n+1){background-color:blue;}
+		.red{background-color:red;}
+		ul.child>li{list-style:none;padding:0 15px;margin: 0;
+		float:left;color:white; }
+		ul.child>li:first-child{border-radius:10px 0 0 10px; }
+		ul.child>li:last-child{border-radius:0 10px 10px 0; }
+	</style>
+	<ul class="child">
+		<li>menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+		<li>menu4</li>
+		<li>menu5</li>
+	</ul>
+</body>
+</html>
