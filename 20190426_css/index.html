@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>css</title>
+	<style>
+		ul>li:first-child{color: red;}
+		/*ul.menu li:last-child{color: blue;}*/
+		ul>li:last-child{color: blue;}
+		ul>li:nth-child(2n){background-color:skyblue;}
+		ul>li:nth-child(2n+1){background-color:orange;}
+
+	a:visited,a:link{color:black; }
+	a{text-decoration:none;}
+	</style>
+</head>
+<body>
+	<!-- ul>li*7>{menu$} -->
+	<!-- submenu start -->
+	<ul class="menu">
+		<li>menu1</li>	<!-- div도 퍼스트 차일드로 사용가능함 -->
+		<!-- ul>li*3>{submenu$} -->
+		<li>menu2</li>
+		<li>menu3</li>
+		<li>menu4</li>
+		<li>menu5</li>
+		<li>menu6</li>
+		<li>menu7</li>
+		</ul>
+		<!-- submenu end -->
+		<a href="http://www.naver.com">네이버</a><br>
+		<a href="http://bxslider.com">bxslider</a><br>
+		<a href="http://www.gabia.co.kr">가비아</a>
+
+</body>
+</html>
