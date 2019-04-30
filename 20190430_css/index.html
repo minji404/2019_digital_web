@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>box css</title>
+	<style>
+		*{margin :0;}
+	div.color{width:600px;height:100px;background-color:gray; }
+	div.color div{width:100px;height:100px;float:left;border:10px solid black;
+		}
+	div.color div:nth-child(1){background-color:red;}
+	div.color div:nth-child(2){background-color:orange;}
+	div.color div:nth-child(3){background-color:yellow;}
+	div.color div:nth-child(4){background-color:green;}
+	div.color div:nth-child(5){background-color:blue;}
+	</style>
+</head>
+<body>
+<div class="color">
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+	<div>5</div>
+</div>
+</body>
+</html>
