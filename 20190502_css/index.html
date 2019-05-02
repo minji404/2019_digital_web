@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>position</title>
+	<style>
+		*{margin:0;}
+		body{background-image:url(../images/bg_grid.gif);}
+		
+		div#header{width: 980px;height: 100px;margin:0 auto; background-color:skyblue;position: relative;}
+		div#header>h1{}
+		div#header>div.util_menu{width: 200px;height: 40px;position: absolute;background-color: #f00;right: 0;top: 0;}
+		div#header>div.gnb_menu{width: 980px;height: 40px;position: absolute;background-color: #0f0;bottom: 0;}
+	
+/*		.box{width: 100px;height: 100px;position:absolute;}
+		.box:nth-child(1){background-color:red;}
+		.box:nth-child(2){background-color:green;left:50px;top:50px; }
+		.box:nth-child(3){background-color:blue;left:100px;top: 100px; }
+		.box1,.box2{width: 100px;height: 100px;position:absolute;}
+		.box1{background-color:red;left: 100px;top: 100px;z-index:2;}
+		.box2{background-color: #0f0;left: 50px;top: 50px;z-index:1;}*/
+
+	
+	</style>
+</head>
+<body>
+<!-- 	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div> -->
+	<div id="header">
+		<h1>logo</h1>
+		<div class="util_menu">util menu</div>
+		<div class="gnb_menu">gnb menu</div>
+	</div>
+</body>
+</html>
