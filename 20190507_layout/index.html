@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+		*{margin:0;padding:0;}
+		li{list-style:none;}
+
+		nav#menu{width: 1000px;margin:0 auto;}
+		nav#menu>ul{}
+		nav#menu>ul:after{content:"";clear:both;display:block;}
+		nav#menu>ul>li{float:left;width: 20%;height: 40px;text-align:center;line-height:40px;}
+		nav#menu>ul>li:nth-child(2n){background-color:skyblue;}
+		nav#menu>ul>li:nth-child(2n+1){background-color:pink;}
+		nav#menu>ul>li:hover{background-color:violet;color:white;cursor:pointer;}
+		div.box{width: 1000px;height: 40px;margin:0 auto; background-color:#cdcdcd;}
+		div.box:after{content:"!!!"}
+	</style>
+</head>
+<body>
+	<nav id="menu">
+		<!-- ul>li*5>{menu$} -->
+		<ul>
+			<li>menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+	</nav>
+	<div style="height: 500px;background-color:gray;">
+		
+	</div>
+	<div class="box">
+		안녕하세요.
+	</div>
+</body>
+</html>

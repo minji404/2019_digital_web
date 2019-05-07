@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		.wrap{width: 500px;background-color: #ddd;margin:0 auto;}
+		/*div.wrap:after{content:"";clear:both;display:block;}*/
+		div.wrap>div{width: 200px;}
+		div.wrap:after{content:"";clear:both;display:block;}
+		div.wrap>div.box01{background-color: skyblue;float:left;margin-left:20px;}
+		div.wrap>div.box02{background-color: pink;float:right;margin-right:20px;}
+		/*div.wrap>div.box03{width:400px;background-color:pink;clear:both;}*/
+	</style>
+
+</head>
+<body>
+	<div class="wrap">
+		<div class="box01">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae doloribus expedita odit labore quod quas, cum dolores voluptatem ipsum non!</div>
+		<div class="box02">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cum et repellendus repellat qui ut quae, dignissimos autem adipisci earum!</div>
+		<!-- <div class="box03">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, suscipit.</div> -->
+	</div>
+	<div style="height: 400px;background-color:gray"></div>
+</body>
+</html>
