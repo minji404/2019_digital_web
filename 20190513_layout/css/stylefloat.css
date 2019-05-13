@@ -1,0 +1,24 @@
+@charset="utf-8";
+/*header*/
+#main_header{width: 960px;height: 140px;background-color:gray;margin: 0 auto;margin-bottom:30px;text-align:center;}
+#main_header>.logo{width: 150px;height: 140px;background-color:violet;float:left; }
+
+#main_header>.util_menu{width: 400px;height: 60px;background-color:gold;float: right;}
+#main_header>.util_menu>ul{}
+#main_header>.util_menu>ul>li{float:left;width: 100px;line-height: 60px; }
+#main_header>.util_menu>ul>li>a{display:block;font-weight:bold;}
+#main_header>.util_menu>ul>li>a:hover{background-color:orange;color:white;}
+
+#main_header>.main_menu{width: 700px;height: 60px;background-color:skyblue; float: right;margin: 20px 0;}
+#main_header>.main_menu>ul{}
+#main_header>.main_menu>ul>li{float:left;width: 116.67px;line-height:60px; }
+#main_header>.main_menu>ul>li>a{display:block;font-weight:bold;}
+#main_header>.main_menu>ul>li>a:hover{background-color:blue;color:white;}
+
+/*content*/
+#content{width: 960px;height: 500px;background-color:gold;margin: 0 auto;margin-bottom: 20px;}
+#content>.main_section{width: 750px;height: 500px;left: 0;background-color:green;float:left;}
+#content>.aside{width: 200px;height: 500px;right: 0;background-color:green;float:right;}
+
+/*footer*/
+.main_footer{width: 960px;height: 100px;margin: 0 auto;background-color:gray;}
