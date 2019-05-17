@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		li{list-style: none;}
+		a:link,a:visited{color:black;}
+		a{text-decoration: none;}
+
+		div.wapper{background-color:skyblue;}
+			div.menu_wrap{width: 980px;margin: 0 auto;}
+			div.menu_wrap:after{content:"";clear:both;display:block;}
+			ul.util_menu{background-color: pink;float:right;}
+			ul.util_menu:after{content:"";clear:both;display:block;}
+			ul.util_menu>li{float:left;position: relative;}
+			ul.util_menu>li:after{content: "";width:1px;height: 10px;background-color: #000;display:block;position: absolute;top: 7px;}
+			ul.util_menu>li>a{display:block;line-height: 25px; padding:0 15px;}
+
+	</style>
+</head>
+<body>
+<div class="wapper">
+	<div class="menu_wrap">
+		<ul class="util_menu">
+			<li><a href="#">MENU1</a></li>
+			<li><a href="#">MENU2</a></li>
+			<li><a href="#">MENU3</a></li>
+			<li><a href="#">MENU4</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
