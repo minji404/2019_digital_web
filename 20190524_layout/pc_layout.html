@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>pc layout</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		#main_header{width: 960px;margin: 0 auto; height: 160px;_background-color:skyblue;position: relative;margin-bottom: 10px;}
+		#main_header > #logo{position: absolute;top: 30px;}
+		#main_header > #util_menu{position: absolute;top: 0;right: 0;}		
+		#main_header > #main_gnb{position: absolute;bottom: 0;right: 0;}
+		#util_menu>ul{}
+		#util_menu>ul>li{float: left;padding:2px 10px;border: 1px solid #000;border-left:0 none;}
+		#util_menu>ul>li:nth-child(1){border-left: 1px solid #000;border-radius:10px 0 0 10px; }
+		#util_menu>ul>li:nth-child(5){border-right: 1px solid #000;border-radius:0 10px 10px 0; }
+/*		#util_menu > ul{}
+		#util_menu > ul>li{float: left;}
+		#util_menu > ul>li>a{padding: 2px 10px;display:block;border:1px solid #000;border-left:0 none; }
+		#util_menu>ul>li:first-child>a{border-left:1px solid#000;border-radius:10px 0 0 10px;  }
+		#util_menu>ul>li:last-child>a{border-right:1px solid#000;border-radius:0 10px 10px 0;  }
+		#util_menu>ul>li>a:hover{background-color: #000;color:white;}
+*/
+		#main_gnb>ul{}
+		#main_gnb>ul>li{float: left;padding:10px 20px;border: 1px solid #000;border-left:0 none;}
+		#main_gnb>ul>li:nth-child(1){border-left: 1px solid #000;border-radius:10px 0 0 10px; }
+		#main_gnb>ul>li:nth-child(5){border-right: 1px solid #000;border-radius:0 10px 10px 0; }
+
+		/*content*/
+		#content{width: 960px;margin: 0 auto;}
+		#content>#main_section{width: 750px;float: left;_background-color:orange;}
+		#main_section > .main_article{padding: 20px;border: 1px solid #000;margin-bottom: 10px;}
+		#content>#main_aside{width: 200px;float: right;background-color:yellow;}
+	</style>
+</head>
+<body>
+	<header id="main_header" class="clearfix">
+		<div id="logo">
+			<h1>Lorem ipsum.</h1>
+		</div>
+		<nav id="util_menu" class="clearfix">
+			<ul>
+				<li><a href="#">MENU1</a></li>
+				<li><a href="#">MENU2</a></li>
+				<li><a href="#">MENU3</a></li>
+				<li><a href="#">MENU4</a></li>
+				<li><a href="#">MENU5</a></li>
+			</ul>
+		</nav>
+		<nav id="main_gnb"class="clearfix">
+			<ul>
+				<li><a href="#">MENU1</a></li>
+				<li><a href="#">MENU2</a></li>
+				<li><a href="#">MENU3</a></li>
+				<li><a href="#">MENU4</a></li>
+				<li><a href="#">MENU5</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="content" class="clearfix">
+
+		<section id="main_section">
+
+			<article class="main_article">
+				<h2>main_article</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad fugiat inventore at provident aliquid fugit et ea quibusdam explicabo voluptatibus, atque sunt sequi obcaecati tenetur vel hic temporibus voluptates. Veritatis at explicabo, repellendus distinctio a dignissimos sequi dolorem ea asperiores dolorum rem beatae unde, repellat consectetur. Perferendis earum, distinctio quo?</p>
+			</article>
+			<article class="main_article">
+				<h2>main_article</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad fugiat inventore at provident aliquid fugit et ea quibusdam explicabo voluptatibus, atque sunt sequi obcaecati tenetur vel hic temporibus voluptates. Veritatis at explicabo, repellendus distinctio a dignissimos sequi dolorem ea asperiores dolorum rem beatae unde, repellat consectetur. Perferendis earum, distinctio quo?</p>
+			</article>			
+			<article class="main_article">
+				<h2>main_article</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad fugiat inventore at provident aliquid fugit et ea quibusdam explicabo voluptatibus, atque sunt sequi obcaecati tenetur vel hic temporibus voluptates. Veritatis at explicabo, repellendus distinctio a dignissimos sequi dolorem ea asperiores dolorum rem beatae unde, repellat consectetur. Perferendis earum, distinctio quo?</p>
+			</article>
+		</section>
+
+		<aside id="main_aside"> </aside>
+
+	</div>
+	
+	<footer id="main_footer"></footer>
+</body>
+</html>
