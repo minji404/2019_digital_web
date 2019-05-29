@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>::mobile::</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		#toggle{display:none;}
+		#main_header{height: 45px;text-align: center;position: relative;}
+		#main_header>label.left,
+		#main_header>a.left,
+		#main_header>a.right{position: absolute;display: block;text-indent: -9999px;}
+		#main_header>label.left{width: 20px;left: 5px;background-image: url(img/menu.png);background-position:-5px 10px; }
+		#main_header>a.left{background-image: url(img/search.png);left: 60px;width: 30px;height: 30px;background-position: -1px -1px;}
+		#main_header>h1{color:#4A4542;}
+		#main_header>a.right{background-image: url(img/cart.png);right: 5px;top: 0;width: 24px;height: 24px;background-position: 0px 0px;}
+
+		/*toggle gnb*/
+		#toggle_gnb_wrap{padding: 15px;line-height: 40px;}
+		.toggle_gnb_wrap{padding: 5px;}
+		.toggle_gnb_wrap>ul{}
+		.toggle_gnb_wrap>ul>li{float: left;}
+		.toggle_gnb_wrap>ul>li>a{display: block;width: 80px;}
+	</style>
+</head>
+<body>
+	<header id="main_header" class="clearfix">
+		<label for="toggle" class="left">Toggle</label>
+		<a href="#" class="left">search</a>
+		<h1>KAKAO FRIENDS</h1>
+		<a href="#" class="right">my</a>
+	</header>
+	<div id="toggle_gnb_wrap">
+		<div class="toggle_gnb">
+			<ul class="clearfix">
+				<li><a href="#">전체보기</a></li>
+				<li><a href="#">테마기획전</a></li>
+				<li><a href="#">인형/피규어</a></li>
+				<li><a href="#">리빙</a></li>
+				<li><a href="#">잡화</a></li>
+				<li><a href="#">패션</a></li>
+				<li><a href="#">문구</a></li>
+				<li><a href="#">여행/레져</a></li>
+				<li><a href="#">NINIZ</a></li>
+			</ul>
+		</div>
+	</div>
+	<nav id="top_gnb" class="clearfix">
+		<div><a href="#">홈</a></div>
+		<div><a href="#">신규</a></div>
+		<div><a href="#">인기</a></div>
+		<div><a href="#">세일</a></div>
+	</nav>
+	<secition class="main_section">
+		<img src="img/photo.jpg" alt="">
+		<div class="header">
+			<h2>귀염뽀짝 카카오 프렌즈</h2>	
+		</div>
+	</secition>
+	<footer id="main_footer">
+		<h3>개인정보처리방침 이용약관 제휴문의</h3>
+		<address>카카오아이엑스 사업자등록번호 : 354-86-0070</address>
+	</footer>
+</body>
+</html>
