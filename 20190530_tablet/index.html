@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>tablet layout</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		body{min-width:760px;}
+
+		/*main_header*/
+		#main_header{
+			height: 60px;line-height: 60px;padding-left:10px;border-bottom: 1px solid #000;background-color: #1d4088;
+			color:white;}
+
+		/*main_gnb*/
+		#main_gnb{border-bottom: 1px solid #000;background-color: #32394a; }
+		#main_gnb>ul.left{float: left;}
+		#main_gnb>ul.left>li{float: left;}
+		#main_gnb>ul.left>li>a{display: block;padding: 10px 20px;text-align: center;border-left:1px solid #5f6673;color:white;}
+		#main_gnb>ul.left>li:nth-child(6){border-right: 1px solid #5f6673;}
+
+		#main_gnb>ul.right{float:right;}
+		#main_gnb>ul.right>li{float: left;}
+		#main_gnb>ul.right>li>a{display: block;padding: 10px 20px;text-align: center;border-left:1px solid #5f6673;color:white;}
+
+		/*content wrap*/
+		#wrap{overflow:hidden;background-color: #71b1d1;}
+		#wrap>#main_lnb{float: left;width: 200px;}
+		#wrap>#main_lnb a{display:block;height: 40px;line-height: 40px;padding-left: 15px;border-bottom: 1px solid #6298b2;border-top: 1px solid #96d6f6;font-weight:bold;color:white;}
+
+		#wrap>#content_wrap{float:right;width: 100%;margin-right:-200px;background-color:white;}
+		#wrap>#content_wrap>#content{padding-right:200px;padding-left:10px;}
+
+		article{padding: 10px;}
+		
+		/*footer*/
+		#main_footer{padding: 10px;border-top: 1px solid #000;text-align: center;}
+	</style>
+</head>
+<body>
+	<header id="main_header">
+		<h1>Fluid</h1>
+	</header>
+	<nav id="main_gnb" class="clearfix">
+		<ul class="left clearfix">
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>                             
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+		</ul>
+		<ul class="right clearfix">
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+		</ul>
+	</nav>
+	<div id="wrap" class="clearfix">
+		<nav id="main_lnb">
+			<ul>
+				<li><a href="#">Button1</a></li>
+				<li><a href="#">Button2</a></li>
+				<li><a href="#">Button3</a></li>
+				<li><a href="#">Button4</a></li>
+				<li><a href="#">Button5</a></li>
+			</ul>
+		</nav>
+		<div id="content_wrap">
+			<div id="content">
+				<article>
+					<h1>Lorem ipsum dolor sit amet.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni eos pariatur numquam quidem fugit dolorum officia vitae ratione optio voluptatibus fugiat aliquam neque accusamus quasi recusandae fuga nam, quia autem error mollitia expedita? Sit, harum aperiam, minus modi, aut officia maxime quasi ab assumenda quibusdam quod dolores molestias expedita quae.</p>
+				</article>
+				<article>
+					<h1>Lorem ipsum dolor sit amet.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni eos pariatur numquam quidem fugit dolorum officia vitae ratione optio voluptatibus fugiat aliquam neque accusamus quasi recusandae fuga nam, quia autem error mollitia expedita? Sit, harum aperiam, minus modi, aut officia maxime quasi ab assumenda quibusdam quod dolores molestias expedita quae.</p>
+				</article>
+				<article>
+					<h1>Lorem ipsum dolor sit amet.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni eos pariatur numquam quidem fugit dolorum officia vitae ratione optio voluptatibus fugiat aliquam neque accusamus quasi recusandae fuga nam, quia autem error mollitia expedita? Sit, harum aperiam, minus modi, aut officia maxime quasi ab assumenda quibusdam quod dolores molestias expedita quae.</p>
+				</article>
+			</div>
+		</div>
+	</div>
+	<footer id="main_footer">
+		<h3>html5+css3</h3>
+		<address>website lay out</address>
+	</footer>
+</body>
+</html>
