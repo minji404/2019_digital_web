@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>menu</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		nav.menu{width: 1000px;margin: 0 auto;}
+		nav.menu>ul{}
+		nav.menu>ul>li{float: left;width: 20%;height: 40px;background-color:gray;}
+		nav.menu>ul>li>a{display: block;line-height: 40px;text-align: center;}
+		nav.menu>ul>li:hover{background-color:skyblue;}
+		nav.menu>ul>li:hover .submenu>li{background-color:skyblue;}
+		
+		nav.menu>ul:hover .submenu{display:block;}
+		.submenu{display:none;background-color:gray;}
+		.submenu>li>a{display: block;line-height: 30px;text-align: center;}
+		.submenu>li>a:hover{background-color:pink;}
+		/*.submenu>li>a:hover{background-color:pink;}*/
+
+		.visual{height: 400px;background-color:orange;}
+
+	</style>
+</head>
+<body>
+	<nav class="menu">
+		<ul class="clearfix">
+			<li><a href="#">menu1</a>
+				<!-- ul.submenu>li*4>a[#]>{sub0$} -->
+				<ul class="submenu">
+					<li><a href="#">sub101</a></li>
+					<li><a href="#">sub102</a></li>
+					<li><a href="#">sub103</a></li>
+					<li><a href="#">sub104</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu2</a>
+				<!-- ul.submenu>li*4>a[#]>{sub0$} -->
+				<ul class="submenu">
+					<li><a href="#">sub201</a></li>
+					<li><a href="#">sub202</a></li>
+					<li><a href="#">sub203</a></li>
+					<li><a href="#">sub204</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu3</a>
+				<!-- ul.submenu>li*4>a[#]>{sub0$} -->
+				<ul class="submenu">
+					<li><a href="#">sub301</a></li>
+					<li><a href="#">sub302</a></li>
+					<li><a href="#">sub303</a></li>
+					<li><a href="#">sub304</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu4</a>
+				<!-- ul.submenu>li*4>a[#]>{sub0$} -->
+				<ul class="submenu">
+					<li><a href="#">sub401</a></li>
+					<li><a href="#">sub402</a></li>
+					<li><a href="#">sub403</a></li>
+					<li><a href="#">sub404</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu5</a>
+				<!-- ul.submenu>li*4>a[#]>{sub0$} -->
+				<ul class="submenu">
+					<li><a href="#">sub501</a></li>
+					<li><a href="#">sub502</a></li>
+					<li><a href="#">sub503</a></li>
+					<li><a href="#">sub504</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<div class="visual"></div>
+</body>
+</html>

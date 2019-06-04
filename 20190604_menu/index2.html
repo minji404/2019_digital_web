@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>::menu연습::</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.menu{width: 80%;height: 60px;background-color:violet;margin: 0 auto;}
+		.body{height: 500px;background-color:pink;margin: 0 auto;}
+
+		.menu>ul{}
+		.menu>ul>li{text-align: center;line-height: 60px;float: left;width: 20%;}
+		.menu>ul>li:hover .submenu{display:block;}
+		.menu>ul>li>a{display:block;}
+		.menu>ul>li>a{display:block;}
+
+		.submenu{display:none;line-height:25px; background-color:white;}
+		.submenu>li{}
+		.submenu>li>a{display:block;}
+		.submenu>li>a:hover{background-color:red;}
+
+	</style>
+</head>
+<body>
+	<div class="menu clearfix">
+		<ul>
+			<li><a href="#">menu1</a>
+				<ul class="submenu">
+					<li><a href="#">menu101</a></li>
+					<li><a href="#">menu102</a></li>
+					<li><a href="#">menu103</a></li>
+					<li><a href="#">menu104</a></li>
+					<li><a href="#">menu105</a></li>
+					<li><a href="#">menu106</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu2</a>
+				<ul class="submenu">
+					<li><a href="#">menu201</a></li>
+					<li><a href="#">menu202</a></li>
+					<li><a href="#">menu203</a></li>
+					<li><a href="#">menu204</a></li>
+					<li><a href="#">menu205</a></li>
+					<li><a href="#">menu206</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu3</a>
+					<ul class="submenu">
+						<li><a href="#">menu301</a></li>
+						<li><a href="#">menu302</a></li>
+						<li><a href="#">menu303</a></li>
+						<li><a href="#">menu304</a></li>
+						<li><a href="#">menu305</a></li>
+						<li><a href="#">menu306</a></li>
+					</ul>
+			</li>
+			<li><a href="#">menu4</a>
+					<ul class="submenu">
+						<li><a href="#">menu401</a></li>
+						<li><a href="#">menu402</a></li>
+						<li><a href="#">menu403</a></li>
+						<li><a href="#">menu404</a></li>
+						<li><a href="#">menu405</a></li>
+						<li><a href="#">menu406</a></li>
+					</ul>
+			</li>
+			<li><a href="#">menu5</a>
+					<ul class="submenu">
+						<li><a href="#">menu501</a></li>
+						<li><a href="#">menu502</a></li>
+						<li><a href="#">menu503</a></li>
+						<li><a href="#">menu504</a></li>
+						<li><a href="#">menu505</a></li>
+						<li><a href="#">menu506</a></li>
+					</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="body">
+	</div>
+</body>
+</html>
