@@ -1,16 +1,23 @@
 @charset"utf-8";
 /*header*/
-#header{}
-#header>nav.util_menu{}
-#header>nav.util_menu>ul{}
-#header>nav.util_menu>ul>li{}
-#header>nav.util_menu>ul>li>a{}
-nav.util_menu>ul.umenu{}
-nav.util_menu>ul.umenu>li{}
-nav.util_menu>ul.umenu>li>a{}
-.mbox1{}
-.mbox2{}
-.mbox3{}
+#header{position: relative;}
+#header>.menu{height: 40px;background-color:#0044af;}
+#header>.menu>nav.util_menu{width: 1200px;height: 40px;margin: 0 auto;background-color:pink;}
+#header>.menu>nav.util_menu>.umenu1{width: 380px;height: 40px;float: left;position: relative;}
+#header>.menu>nav.util_menu>.umenu1>ul{}
+#header>.menu>nav.util_menu>.umenu1>ul>li{float: left;background-color: #00163b;width: 120px;height: 40px;margin-right:5px; }
+#header>.menu>nav.util_menu>.umenu1>ul>li:first-child{float: left;background-color:white;width: 120px;height: 40px;}
+#header>.menu>nav.util_menu>.umenu1>ul>li:first-child a{color:black;}
+#header>.menu>nav.util_menu>.umenu1>ul>li>a{display: block;padding: 0 32px;line-height: 40px;font-size:14px;color:white;text-align: center;}
+#header>.menu>nav.util_menu>.umenu2{width: 300px;height: 40px;background-color:violet;float: right;}
+#header>.menu>nav.util_menu>.umenu2>ul{float: left;}
+#header>.menu>nav.util_menu>.umenu2>ul>li{float: left;}
+#header>.menu>nav.util_menu>.umenu2>ul>li>a{float: left;}
+
+.mbox{height: 40px;float: left;}
+.mbox1{width: 120px;height: 40px;background-color:white;position: absolute;}
+.mbox2{width: 120px;height: 40px;background-color:#00163b;position: absolute;}
+.mbox3{width: 120px;height: 40px;background-color:#00163b;position: absolute;}
 
 nav.menu{}
 nav.menu .logo{}
