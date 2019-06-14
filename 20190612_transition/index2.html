@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>hover</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		img{display: block;}
+		ul>li{width: 300px;height: 225px;background-color:pink;position: relative;overflow: hidden;}
+		ul>li>.img01{position: absolute;z-index:1; cursor:pointer;}
+		ul>li>.img02{position: absolute;top: 0px;transition:0.3s;
+		transform:scale(1);
+		}
+		ul>li>.back{width: 300px;height: 225px;background-color: #000;position: absolute;opacity:0;transition:0.3s;}
+
+		/*li:hover .img02{top: 0;}위에225해놓고 이미지올라옴*/
+/*		li:hover .back{opacity:0.5;}
+li:hover .img02{transform:scale(1.2);}사진커짐*/
+		li .img01:hover ~ div.back{opacity:0.5;}
+		li .img01:hover + img.img02{transform:scale(1.2);}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<img src="./images/01.png" alt="" class="img01" onclick="location.href='http://www.naver.com'">
+			<img src="./images/img6.jpg" alt="" class="img02">
+			<div class="back"></div>
+		</li>
+	</ul>
+</body>
+</html>
