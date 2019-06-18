@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>object코드덜작성함</title>
+	<style>
+		#upspeed{width: 200px;height: 100px;background-color:skyblue;color:white;}
+	</style>
+</head>
+<body>
+	<p id="upspeed"></p>
+	<p id="downupspeed"></p>
+	<p id="downupspeed"></p>
+
+	<p id>car1	</p>
+	<p id> de1010</p>
+
+
+	<button type="button" onclick="printUp()">upspeed</button>
+	<button type="button" onclick="printDown()">Donwspeed</button>
+	<script>
+		var car = {
+			name:"sonata",
+			speed:100,
+			color:"white",
+			speedUp:function(a){
+				var sp = this.speed + a;
+				return sp;
+			},
+			speedDown:function(a){
+				var sp = this.speed - a;
+				return sp;
+			}
+		}
+		function printUp(){var upspeed = document.getElementById("upspeed").innerHTML = car.speedUp(100);
+	}
+		function printDown()
+		{
+			var downupspeed = document.getElementById("downupspeed").innerHTML = car.speedDown(150);
+		}
+		var myCar =[{name:"sonata",color:"blue",speed:30},
+		 {name:"jepp",clolor:"red",speed:70},
+		 {name:"passt",color:"white",speed:100}
+		 ]
+		 for(var i=0;i<3;i++){
+		 	var myCarName = document.getElementById("data1" + i);
+		 	myCarName.innerHTML = myCar[i].name;
+
+		 	document.getElementById("data2" + i).innerHTML + myCar[i].color;
+		 	document.getElementById("data3" + i).innerHTML + myCar[i].speed;
+
+		 }
+
+		 var fruit =['포도','사과','바나나','망고'];
+		 for (var k = 0; k < fruit.length; k++) {
+		 	document.write(fruit[k]+"<br>");
+		 }
+
+		 for(var k in fruit){
+		 	document.write(fruit[k]+"<br>");
+		 }
+
+		 function wOpen(){
+		 window.open(
+		 	'http://www.naver.com',
+		 	'winPopup',
+		 	'width=400,height=300'
+		 	);
+		}
+
+	</script>
+	<button type="button" onclick="wOpen()">새창</button>
+</body>
+</html>
