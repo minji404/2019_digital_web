@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>animation</title>
+	<style>
+		.box{width: 100px;height: 100px;background-color:#f00;animation:boxmove 2s linear infinite alternate-reverse;position: absolute;bottom: 0;border-radius:50px;}
+		@keyframes boxmove{
+			0%{left: 0;}
+			50%{left: 300px;}
+			100%{left: 0;}
+		}
+		.box01{width: 200px;height: 10px;background-color:blue;animation:lines 2s linear;}
+
+		@keyframes lines{
+			from{width: 0;}
+			to{width: 200px;}
+		}
+		.box02{width: 200px;height: 10px;background-color:skyblue;animation:lines2 2s linear;animation-delay:2s;animation-fill-mode:forwards;position: absolute;left: 200px;top: 8px;}
+		@keyframes lines2{
+			from{width: 0;}
+			to{width: 200px;}
+		}
+		.button{width: 200px;height: 40px;line-height:40px;background-color:orange;text-align: center;position: relative;}
+		.bar{width: 200px;height: 5px;position: absolute;bottom: 0;background-color: #f00;animation:btnBar 0.8s;animation-play-state:paused;}
+		@keyframes btnBar{
+			from{width: 0;}
+			to{width: 200px;}
+		}
+		.button:hover .bar{animation-play-state:running;}
+
+		.button1{width: 200px;height: 40px;background-color:skyblue;line-height: 40px;text-align: center;position: relative;}
+
+		.bar1{width:0px;height: 5px;background-color: #f00;position: absolute;transition:0.3s;bottom: 0;}
+
+		.button1:hover .bar1{width: 200px;}
+
+		.button2{width: 200px;height: 40px;background-color:skyblue;line-height: 40px;text-align: center;position: relative;}
+
+		.bar2{width:200px;height: 5px;background-color: #f00;position: absolute;transition:0.3s;bottom: 0;transform:scaleX(0.5);}
+
+		.button2:hover .bar2{transform:scaleX(1);}
+
+
+	/*	.box_wrap{width: 300px;height: 300px;background-color:orange;position: relative;margin: 0 auto;}
+		.line1{width: 300px;height: 10px;background-color:black;position: absolute;top: 0;animation:lines 2s linear;animation-delay:2s;animation-fill-mode:both;animation-direction:alternate;}
+		.line2{width: 10px;height: 300px;background-color:red;position: absolute;right: 0;animation:liness 2s linear;animation-delay:4s;animation-fill-mode:both;animation-direction:alternate;}
+		.line3{width: 300px;height: 10px;background-color:orange;position: absolute;bottom: 0;animation:linesd 2s linear ;animation-delay:6s;animation-fill-mode:both;animation-direction:alternate-reverse;z-index: 1}
+		.line4{width: 10px;height: 300px;background-color:orange;position: absolute;left: 0;animation:linessd 2s linear;animation-delay:8s;animation-fill-mode:both;animation-direction:alternate-reverse;z-index: 1}
+		.line5{width: 300px;height: 10px;position: absolute;bottom: 0;background-color:green;z-index: 0}
+		.line6{width: 10px;height: 300px;position: absolute;left: 0;background-color:blue;z-index: 0}
+*/
+		/*@keyframes lines{
+			from{width:0;}
+			to{width: 300px;}
+		}
+		@keyframes liness{
+			from{height: 0;}
+			to{height: 300px;}
+		}
+		@keyframes linesd{
+			from{width:0px;}
+			to{width: 300px;}
+		}
+		@keyframes linessd{
+			from{height: 0;}
+			to{height: 300px;}
+		}*/
+	</style>
+</head>
+<body>
+	<!-- <div class="box"></div>
+	<div class="box01"></div>
+	<div class="box02"></div>
+
+	<div class="button">
+		안녕하세요
+		<div class="bar"></div>
+	</div>
+
+	<div class="button1">
+		안녕하세요
+		<div class="bar1"></div>
+	</div>
+	<div class="button2">
+		안녕하세요
+		<div class="bar2"></div>
+	</div>
+ -->
+	<!-- <div class="box_wrap">
+		<div class="line1"></div>
+		<div class="line2"></div>
+		<div class="line3"></div>
+		<div class="line4"></div>
+		<div class="line5"></div>
+		<div class="line6"></div>
+	</div>
+ -->
+	<style>
+		.wrapper{width: 500px;height: 500px;margin: 0 auto;background-color:orange;position: relative;}
+		.line1{height: 10px;background-color:#000;
+			animation-name:line1;}
+		.line2{width: 10px;background-color: #f00;position: absolute;right: 0;top: 0;animation-name:line2;animation-delay:2s;}
+		.line3{height:10px;background-color: #ff0;position: absolute;right: 0;bottom: 0;animation-name:line3;animation-delay:4s;}
+		.line4{width: 10px;background-color: #0ff;position: absolute;left: 0;bottom: 0;animation-name:line4;animation-delay:6s;}
+
+		.line1,.line2,.line3,.line4{animation-duration:2s;animation-timing-function:linear;animation-fill-mode:forwards;}
+		@keyframes line1{
+			from{width: 0;}
+			to{width: 500px;}
+		}
+		@keyframes line2{
+			from{height: 0;}
+			to{height: 500px;}
+		}
+		@keyframes line3{
+			from{width: 0;}
+			to{width: 500px;}
+		}
+		@keyframes line4{
+			from{height: 0;}
+			to{height: 500px;}
+		}
+	</style>
+
+	<div class="wrapper">
+		<div class="line1"></div>
+		<div class="line2"></div>
+		<div class="line3"></div>
+		<div class="line4"></div>
+	</div>
+
+<style>
+	.text_wrapper{text-align: center;width: 800px;height: 500px;background-color:skyblue;position: relative;}
+	.text_wrapper h2{width: 100%;position: absolute;top: 50%;transform:translateY(-50%);font-size:40px;}
+	.text_wrapper h2 span{
+			display:inline-block;animation-name:tani;animation-duration:0.3s;animation-fill-mode:forwards;opacity:0;
+	}
+	.text_wrapper h2 span:nth-child(2){animation-delay:0.2s;}
+	.text_wrapper h2 span:nth-child(3){animation-delay:0.4s;}
+	.text_wrapper h2 span:nth-child(4){animation-delay:0.6s;}
+	.text_wrapper h2 span:nth-child(5){animation-delay:0.8s;}
+	.text_wrapper h2 span:nth-child(6){animation-delay:1s;}
+	.text_wrapper h2 span:nth-child(7){animation-delay:1.2s;}
+	.text_wrapper h2 span:nth-child(8){animation-delay:1.4s;}
+	.text_wrapper h2 span:nth-child(9){animation-delay:2s;}
+	@keyframes tani{
+		from{transform:translate(20px,-20px) rotate(-360deg) scale(3);}
+		to{transform:translate(0) rotate(0) scale(1);opacity:1;}
+	}
+</style>
+
+<div class="text_wrapper">
+	<h2>
+	<span>G</span>
+	<span>o</span>
+	<span>o</span>
+	<span>d</span>
+	<span>B</span>
+	<span>y</span>
+	<span>e</span>
+	<span>!</span>
+	<span>!</span>
+	</h2>
+
+</div>
+
+</body>
+</html>
