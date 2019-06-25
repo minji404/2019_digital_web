@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>string object</title>
+	<script>
+		var theText = "Web js hi city";
+		document.write(theText.bold()+"<br>");
+		document.write(theText.link("http://www.naver.com")+"<br>")
+		document.write(theText.length+"<br>");
+		document.write(theText.toLowerCase()+"<br>");
+		document.write(theText.toUpperCase()+"<br>");
+		document.write(theText.indexOf("i")+"<br>");
+		document.write(theText.lastIndexOf("i")+"<br>");
+		document.write(theText.charAt(5)+"<br>");
+		document.write(theText.substring(4,8)+"<br>");
+		document.write(theText.substr(10,4)+"<br>");
+		document.write(theText.replace("Web","bye")+"<br>");
+		document.write(theText.concat("good")+"<br>");
+		document.write(theText.slice(7,11)+"<br>");
+
+		var bText = "영어/수학/국어/국사";
+		var aText = bText.split("/");//aText =["Web","Js","hi","city"]
+		document.write(aText[1]+"<br>");
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
