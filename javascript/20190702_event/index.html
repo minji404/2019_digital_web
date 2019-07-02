@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>event</title>
+</head>
+<body>
+	<p id="p1">마우스를 올려 보세요.</p>
+	<a href="http://www.naver.com" onclick="return false">이동 안되는 링크</a>
+	<a href="http://www.naver.com" onclick="event."></a>
+
+	<script>
+		document.getElementById("p1").onmouseover = f;
+
+		function f(e){
+			alert(e.type+"안녕하세요");
+		}
+	</script>
+	<h3>계산기</h3>
+	<form>
+		<input type="text" id="st">
+		* <input type="text" id="exp"><br>
+		값 <input type="text" id="result"><br>
+		<input type="button" value="계산" onclick="calculate()">
+	</form>
+	<script>
+		function calculate(){
+			var st = document.getElementById("st");
+			var exp = document.getElementById("exp");
+			var result = document.getElementById("result");
+
+			result.value = eval(exp.value * st.value);
+		}
+	</script>
+	<div>마우스 관련
+		<span onmousedown="down(this)" onmouseup="up(this)">이벤트</span>
+		가 발생했습니다.
+	</div>
+	<script>
+		function down(obj){
+			obj.style.fontStyle = "italic";
+			obj.style.fontSize ="2em";
+		}
+		function up(obj){
+			obj.style.fontStyle ="normal";
+			obj.style.fontSize ="1em";
+		}
+	</script>
+
+</body>
+</html>
