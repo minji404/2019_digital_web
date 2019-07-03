@@ -4,18 +4,24 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
 	<title>event</title>
+	<script>
+		window.onload=function(){
+			var img = document.getElementById("img");
+			alert(img.width);
+		};
+	</script>
 </head>
 <body>
 	<p id="p1">마우스를 올려 보세요.</p>
 	<a href="http://www.naver.com" onclick="return false">이동 안되는 링크</a>
-	<a href="http://www.naver.com" onclick="event."></a>
+	<a href="http://www.naver.com" onclick="event.preventDefault()">이동안되는 링크</a>
 
 	<script>
-		document.getElementById("p1").onmouseover = f;
+		// document.getElementById("p1").onmouseover = f;
 
-		function f(e){
-			alert(e.type+"안녕하세요");
-		}
+		// function f(e){
+		// 	alert(e.type+"안녕하세요");
+		// }
 	</script>
 	<h3>계산기</h3>
 	<form>
@@ -34,10 +40,12 @@
 		}
 	</script>
 	<div>마우스 관련
-		<span onmousedown="down(this)" onmouseup="up(this)">이벤트</span>
+		<span onmousedown="down(this)" onmouseup="up(this)" onmouseover="over(this)" onmouseout="out(this)" onmousewheel="wheel(event,this)">이벤트</span>
 		가 발생했습니다.
 	</div>
 	<script>
+
+		
 		function down(obj){
 			obj.style.fontStyle = "italic";
 			obj.style.fontSize ="2em";
@@ -46,7 +54,46 @@
 			obj.style.fontStyle ="normal";
 			obj.style.fontSize ="1em";
 		}
-	</script>
 
+		function over(obj){
+			obj.style.borderColor = "violet";
+			obj.style.borderWidth = "1px";
+			obj.style.borderStyle = "solid";
+		}
+		function out(obj){
+			obj.style.borderColor = "lightgray";
+			obj.style.borderWidth = "0px";
+			obj.style.borderStyle = "solid";
+		}
+		function wheel(e,obj){
+			if(e.wheelDelta<0){		//휠을 아래로 굴릴 때
+				width--;			//width = width -1;
+				if(width<0) width =0;
+			}else{					//휠을 위로 굴릴 때
+				width++;			//width = width +1;
+			}
+
+			console.log(width);
+
+			obj.style.borderStyle = "solid";
+			obj.style.borderWidth =  width + "px";
+		}
+		var width =1;
+	</script>
+	<style>
+		#div{width: 250px;background-color:skyblue;}
+	</style>
+	<h3>마우스 이벤트 객체의 프로퍼티 onmousemove</h3>
+	<img src="../../images/testimg.jpg" onmousemove="where(event)" id="img">
+	<div id="div"></div>
+	<script>
+		var div = document.getElementById("div");
+		function where(e){
+			var text = "screenX, screenY = " + e.screenX +", "+ e.screenY+"<br>";
+			text += "clientX, clientY = " + e.clientX + "," + e.clientY+"<br>";
+			text += "offsetX, offsetY = " + e.offsetX + "," + e.offsetY;
+			div.innerHTML = text; 
+		}
+	</script>
 </body>
 </html>
