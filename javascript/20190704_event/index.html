@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+		window.onload = function(){
+			document.getElementById("name").onclick = focus()
+		};
+		function checkF(obj){
+			if(obj.value ==""){
+				alert("이름을 입력하세요");
+				obj.focus();
+			}
+		}
+
+		// document.getElementById("han").onclick = click;
+		// function click(){
+
+		// }
+
+		// document.getElementById("han").onclick = function(){
+
+		// };
+	</script>
+</head>
+<body onload='document.getElementById("name").focus();'>
+	<!-- 이름<input type="text" name="myname" value=""> -->
+	<form>
+		이름<input type="text" name="myname" id="name" onblur="checkF(this)">
+		<br>
+		나이<input type="text">
+
+	</form>
+	<script>
+		
+	</script>
+</body>
+</html>

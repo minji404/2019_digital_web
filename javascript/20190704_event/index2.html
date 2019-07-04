@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>select radio</title>
+	<script>
+		function findChecked(){
+			var kcity = document.getElementsByName("city");
+			// console.log(kcity.length);
+
+			for(var i=0;i<kcity.length;i++){
+				if(kcity[i].checked == true){
+					found = kcity[i];
+				}
+			}
+
+			// if(kcity[0].checked == true){
+			// 	found = kcity[0];
+			// }
+			// if(kcity[1].checked == true){
+			// 	found = kcity[1];
+			// }
+			// if(kcity[2].checked == true){
+			// 	found = kcity[2];
+			// }
+			console.log(found.value);
+			// alert(found.value);
+			document.getElementById("text").innerHTML = found.value;
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="radio" name="city" value="seoul"> 서울
+		<input type="radio" name="city" value="busan"> 부산
+		<input type="radio" name="city" value="chunchen"> 춘천
+		<!-- <input type="radio" name="city1" value="chunchen1"> 춘천
+		<input type="radio" name="city1" value="chunchen2"> 춘천 -->
+		<input type="button" value="라디오전송" onclick="findChecked();">
+	</form>
+	<div id="text"></div>
+</body>
+</html>
