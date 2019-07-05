@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>마우스 관련 리스너</title>
+	<script>
+		var width =1;
+		function down(obj){
+			obj.style.fontStyle = "italic";
+		}
+		function up(obj){
+			obj.style.fontStyle ="nomal";
+		}
+		function over(obj){
+			obj.style.borderColor = "violet";
+		}
+		function over1(obj){
+			obj.style.borderColor = "skyblue";
+		}
+		function out(obj){
+			obj.style.borderColor ="lightgray";
+		}
+		function out1(obj){
+			obj.style.borderColor ="blue";
+		}
+		function wheel(e,obj){
+			if(e.wheelDelta <0){
+				width--;
+				if(width < 0) width = 0;
+			}
+			else
+				width++;
+			obj.style.borderStyle = "ridge";
+			obj.style.borderWidth = width+"px";
+		}
+		function wheel1(e,obj){
+			if(e.wheelDelta <0){
+				width--;
+				if(width < 0) width = 0;
+			}
+			else
+				width++;
+			obj.style.borderStyle = "solid";
+			obj.style.borderWidth = width+"px";
+		}
+	</script>
+</head>
+
+	<h3>마우스 관련 이벤트 리스너</h3>
+	<hr>
+	<div><span onmousedown="down(this)"
+				onmouseup="up(this)"
+				onmouseover="over1(this)"
+				onmouseout="out(this)"
+				onwheel="wheel(event,this)" 
+		>마우스</span> <span onmousedown="down(this)"
+				onmouseup="up(this)"
+				onmouseover="over1(this)"
+				onmouseout="out1(this)"
+				onwheel="wheel(event,this)" 
+		>관련</span>
+		<span onmousedown="down(this)"
+				onmouseup="up(this)"
+				onmouseover="over(this)"
+				onmouseout="out(this)"
+				onwheel="wheel(event,this)" 
+		>
+			이벤트
+		</span>
+		<span onmousedown="down(this)"
+				onmouseup="up(this)"
+				onmouseover="over(this)"
+				onmouseout="out1(this)"
+				onwheel="wheel1(event,this)" 
+		>
+		가 발생합니다.</span>
+	</div>
+<body>
+	
+</body>
+</html>
