@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+		// $(document).ready();
+		// $(document).ready(function(){});
+		$(document).ready(function(){
+			//$("p").hide(); $("p").css("display","none");
+			// $("p").css().css(); 체인기법 fontWeight
+			//$("p").css("color","red").css("font-weight","bold").css("background-color","pink");
+			var pl = $("p").length;
+			console.log(pl);
+			//$("p").eq(1).hide();
+			$("p").eq(0).hide();
+		});
+	</script>
+	
+</head>
+<body>
+	<p>Lorem ipsum dolor sit amet.</p>
+	<p>At ex, laborum sed. Inventore.</p>
+
+	<script>
+		//var tagP=document.getElementsByTagName("p");
+		//tagP[0].style.display ="none";
+		//tagP[1].style.display ="none";
+
+		// document.getElementsByTagName("p")[0].style.display ="none";
+		// document.getElementsByTagName("p")[1].style.display ="none";
+	</script>
+</body>
+</html>
