@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		body{background-color: #000;}
+		img{display: block;_margin-bottom: 10px;}
+		.img1{width: 100%;}
+		.img2{max-width:100%;}
+		.red{color:gold;text-shadow:0 0 3px white;transition: .3s;}
+		.red:hover{text-shadow: 2px 2pt 3px white,-4px -4px 5px white;color:white;}
+		
+		.box{width: 300px;height: 300px;transition:0.3s; _box-shadow:0 0 15px white;}
+		.box:hover{box-shadow:5px 5px 15px white;}
+	</style>
+</head>
+<body>
+<!-- 	<img src="../images/testimg.jpg" alt="이미지" class="img1">
+	<img src="../images/testimg.jpg" alt="이미지" class="img2"> -->
+	<div class="red">DRop shadow</div>
+	<div class="box"><img src="../images/testimg.jpg" alt=""></div>
+
+<style>
+	.container{height: 730px;
+		background:url(images/contentsbg01.jpg) no-repeat center fixed;
+		background-size:cover;
+	}
+	.container .section{width: 1260px;margin: 0 auto;padding-top: 70px;}
+	.section > h4{text-align: center;color:white;}
+	.section > h4:after{content:"";display: block;width:50px;height: 3px;background-color: #fff;margin: 30px auto;}
+	.section > p{text-align: center;color:white;font-size:2em;margin-bottom: 70px;}
+	.section ul{width: 100%;}
+	.section ul li{float: left;margin-right: 20px;}
+	.section ul li:last-child{margin-right: 0;}
+	.section .card{width: 300px;height: 380px;_background-color:pink;position: relative;transition: 0.3s;}
+	.section .card:hover{transform:translate(-10px,-10px);box-shadow: 8px 8px 10px rgba(0,0,0,0.5);}
+	.section .card img{position: absolute;left: 50%;transform:translateX(-50%);top: 70px;}
+	.section .card_body{width: 300px;height: 160px;position: absolute;bottom: 0;text-align: center;color:#fff;padding: 0 20px;}
+	.section .card_body h3{margin-bottom: 10px;}
+
+</style>
+	<div class="container">
+		<div class="section">
+			<h4>비젼</h4>
+			<p>vision 2020</p>
+			<ul class="clearfix">
+				<li>
+					<div class="card">
+						<img src="images/banner_icon01_01.png" alt="engineering">
+						<div class="card_body">
+							<h3>Engineering</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, ea!</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card">
+						<img src="images/banner_icon01_02.png" alt="engineering">
+						<div class="card_body">
+							<h3>Engineering</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, ea!</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card">
+						<img src="images/banner_icon01_03.png" alt="engineering">
+						<div class="card_body">
+							<h3>Engineering</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, ea!</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card">
+						<img src="images/banner_icon01_04.png" alt="engineering">
+						<div class="card_body">
+							<h3>Engineering</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, ea!</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div >
+</body>
+</html>
