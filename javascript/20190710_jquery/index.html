@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		.tabWrap{width: 500px;margin: 0 auto;}
+		.tabWrap ul{}
+		.tabWrap ul li{float: left;width: 20%;line-height: 40px;text-align: center;border-right: 1px solid gray;cursor:pointer;}
+		.tabWrap ul li:first-child{border-left: 1px solid gray;}
+		.tabWrap ul li:hover{background-color:skyblue;}
+		.boxWrap > div{display: none;}
+		.tabWrap ul li.active{background-color:darkblue;color:white;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			
+
+			// $(".tabWrap > ul > li").eq(0).click(function(){
+			// 	$(".boxWrap > div").hide();
+			// 	$(".boxWrap > div").eq(0).show();
+			// });
+			// $(".tabWrap > ul > li").eq(1).click(function(){
+			// 	$(".boxWrap > div").hide();
+			// 	$(".boxWrap > div").eq(1).show();
+			// });
+			// $(".tabWrap > ul > li").eq(2).click(function(){
+			// 	$(".boxWrap > div").hide();
+			// 	$(".boxWrap > div").eq(2).show();
+			// });
+			// $(".tabWrap > ul > li").eq(3).click(function(){
+			// 	$(".boxWrap > div").hide();
+			// 	$(".boxWrap > div").eq(3).show();
+			// });
+			// $(".tabWrap > ul > li").eq(4).click(function(){
+			// 	$(".boxWrap > div").hide();
+			// 	$(".boxWrap > div").eq(4).show();
+			// });
+				
+			// $(".box1").show();
+			// $(".boxWrap > div.box1").show();
+			// $(".boxWrap > div").eq(0).show();
+			// $(".boxWrap > div:eq(0)").show();
+			// $(".boxWrap > div").first().show();
+			// $(".boxWrap").children().first().show();
+		$(".boxWrap > div").hide();
+			// $(".boxWrap > div").eq(0).show();
+			$(".boxWrap > div").eq(0).fadeIn();
+
+			$(".tabWrap > ul > li").click(function(){
+				//$(this).index() 자신의 index를 구함
+				// console.log($(this).index());
+				var liNum = $(this).index();
+
+				console.log(liNum);
+
+				$(".tabWrap > ul > li").removeClass();
+				$(this).addClass("active");
+
+				$(".boxWrap > div").hide();
+				$(".boxWrap > div").eq(liNum).fadeIn();
+			});
+});
+	</script>
+</head>
+<body>
+	<div class="tabWrap">
+		<ul class="clearfix">
+			<li class="active">menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+		<div class="boxWrap">
+			<div class="box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus nihil magni, cumque laborum amet eos ut optio consequatur repellat omnis!</div>
+			<div class="box2">Ipsam consequatur nesciunt ad! Sit autem reiciendis quos alias tempore recusandae nostrum porro numquam, eos omnis, consequatur odio velit, non.</div>
+			<div class="box3">Qui sed incidunt natus excepturi doloribus, laboriosam dolorum! Vero delectus ipsa accusamus recusandae unde deserunt odio distinctio quasi tempore rerum!</div>
+			<div class="box4">Cupiditate, consectetur recusandae quo magnam officia aliquam harum odio, nisi excepturi consequuntur quisquam nam, unde similique iusto debitis eligendi natus.</div>
+			<div class="box5">Animi perspiciatis maxime assumenda iusto, iste culpa voluptate nostrum aut voluptatem officiis, aspernatur ipsam expedita eum, inventore enim! Aliquam, ducimus.</div>
+		</div>
+	</div>
+</body>
+</html>
