@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>현대자동차 탭메뉴 연습</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		.content_wrap{width: 1000px;margin: 0 auto;;}
+		.menu{width: 1000px;height: 36px;position: relative;}
+		.logo{position: absolute;left: 0;}
+		.menuw{width: 755px;height: 35px;position: absolute;right: 0;top: 0;background-color:#2c2d31;color:white;font-weight:bold;}
+		.menuw>ul>li{float: left;cursor:pointer;width: 120px;text-align: center;line-height: 36px;}
+		.menuw>ul>li:hover{background-color:gray;}
+		.menuw>ul>li.active{background-color: #fff;color:#2c2d31;}
+		.content{width: 1000px;}
+		.img1{}
+		.img1>ul{}
+		.img1>ul>li{float: left;margin-right: 30px;}
+		.img1>ul>li:last-child{float:right;cursor:pointer;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".content > div").hide();
+			$(".content > div:eq(0)").show();
+
+			 var sCount = $(".content div").eq(0).find("li").length-1;
+			console.log(sCount);
+			$(".sCount").html(sCount);
+
+			$(".menuw ul li").click(function(){
+				var liNum = $(this).index();
+				
+				$(".menuw > ul > li").removeClass();
+				$(this).addClass("active");
+				$(".content > div").hide();
+				$(".img1 > ul > li:last-child").show();
+				$(".content > div:eq("+liNum+")").show();
+
+			 sCount = $(".content div").eq(liNum).find("li").length-1;
+			console.log(sCount);
+			$(".sCount").html(sCount);
+
+			});
+			$(".img1 > ul > li:last-child").click(function(){
+				// $(".img1 ul li").hide();
+				$(".img1 > ul > li:last-child").hide();
+				$(".content > div").hide();
+				$(".menuw > ul > li").removeClass();
+			});
+			
+		});
+		
+
+	
+	</script>
+</head>
+<body>
+	<div class="content_wrap">
+		<div class="menu">
+			<div class="logo"><img src="tab_logo.jpg" alt=""></div>
+			 <div class="menuw">
+			 	<ul class="clearfix">
+			 		<li class="active">승용</li>
+			 		<li>견적</li>
+			 		<li>상담</li>
+			 		<li>이벤트</li>
+			 	</ul>
+			 </div>
+		</div>
+
+		<div class="content">
+			<div class="img1">
+				<ul class="clearfix">
+					<li><img src="car1_01.gif" alt=""></li>
+					<li><img src="car1_02.gif" alt=""></li>
+					<li><img src="car1_03.gif" alt=""></li>
+					<li><img src="car1_04.gif" alt=""></li>
+					<li><img src="car1_05.gif" alt=""></li>
+					<li><img src="car1_06.gif" alt=""></li>
+					<li><img src="x.jpg" alt=""></li>
+				</ul>
+			</div>
+			<div class="img1">
+				<ul class="clearfix">
+					<li><img src="estimate_01.gif" alt=""></li>
+					<li><img src="estimate_02.gif" alt=""></li>
+					<li><img src="estimate_03.gif" alt=""></li>
+					<li><img src="estimate_04.gif" alt=""></li>
+					<li><img src="x.jpg" alt=""></li>
+				</ul>
+			</div>
+			<div class="img1">
+				<ul class="clearfix">
+					<li><img src="consult_01.gif" alt=""></li>
+					<li><img src="consult_02.gif" alt=""></li>
+					<li><img src="consult_03.gif" alt=""></li>
+					<li><img src="consult_04.gif" alt=""></li>
+					<li><img src="x.jpg" alt=""></li>
+				</ul>
+			</div>
+			<div class="img1">
+				<ul class="clearfix">
+					<li><img src="event_01.gif" alt=""></li>
+					<li><img src="event_02.gif" alt=""></li>
+					<li><img src="x.jpg" alt=""></li>
+				</ul>
+			</div>
+
+		</div>	<div class="sCount"></div>
+	</div>
+</body>
+</html>
