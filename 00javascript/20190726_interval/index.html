@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Interval</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<style>
+		.num > div:nth-child(2n){background-color:skyblue;}
+	</style>
+	<script src="../../js/jquery-3.3.1.min.js"></script>
+	<script>
+		// setInterval(hello,3000);
+		// function hello(){
+		// 	alert('hello');
+		// }
+		
+
+		$(document).ready(function(){
+			var current = 0;
+
+			function add(){
+			current++;
+			$(".num").append("<div>"+current+"</div>");
+			$(".txt").html("진행중");
+			}
+			// var addNum = setInterval(add,1000);
+
+			function triBtn(){
+				$(".sbtn").trigger("click");
+			}
+
+			triBtn();
+			var addNum = setInterval(add,1000);
+
+			$(".ebtn").click(function(){
+				clearInterval(addNum);
+				$(".txt").html("멈춤");
+			});
+			$(".sbtn").click(function(){
+				addNum = setInterval(add,1000);
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<button class="ebtn">멈춤</button>
+	<button class="sbtn">시작</button>
+	<div class="txt"></div>
+	<div class="num">
+		
+	</div>
+</body>
+</html>
