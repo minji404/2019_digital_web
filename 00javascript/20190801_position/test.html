@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>포지션연습</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.3.1.min.js"></script>
+	<style>
+		#panel{width: 640px;height: 900px;_border: 1px solid #000;position: relative;float: left;}
+		#bg{width: 638px;height: 638px;background:url(../images/web0.png)center;}
+		#img{position: absolute;left: 218px;top: 20px;}
+
+	</style>
+	<script>
+		$(document).ready(function(){
+			var objBg = $("#bg");
+			var objSp = $("#img");
+			var nStarX = objBg.position().top;
+			// var nEndX = nStarX + objBg.height() - objSp.height();
+			var nEndX = 450;
+			var nCurrent = nStarX;
+			var nStep=5;
+			var nTimerId = 0;
+
+			function move(){
+				nCurrent +=nStep;
+			if(nCurrent > nEndX){
+				nStep=-5;
+			}
+			if(nCurrent < nStarX){
+				nStep=5;
+			}
+			$(".txt").html(nCurrent);
+			objSp.css("top",nCurrent);
+			}
+			// setInterval(move,30);
+			$("#btn_start").click(function(){
+				if(nTimerId == 0){
+				 nTimerId = setInterval(move,30);
+				 console.log(nTimerId);
+				}
+
+			});
+			$("#btn_stop").click(function(){
+				if(nTimerId != 0){
+				clearInterval(nTimerId);
+				nTimerId = 0;
+			}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="panel">
+		<div id="bg"></div>
+		<div id="img"><img src="../images/spider.png" alt="" style="width:200px;height:400px"></div>
+	</div>
+	<button id="btn_start">시작</button>
+	<button id="btn_stop">정지</button>
+	<div class="txt"></div>
+</body>
+</html>
