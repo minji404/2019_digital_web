@@ -24,6 +24,7 @@
 
 				if(scrollY>menuPos){
 					$(".nav").addClass("fixed");
+					// $(".nav").css("position","fixed");
 				}else{
 					$(".nav").removeClass("fixed");
 				}
@@ -78,11 +79,12 @@
 	</script>
 	<style>
 		#wrapper{margin:20px;border: 1px solid #000;}
-		.nav{width: 100%;transition:0.3s; }
+		.nav{width: 100%;transition:0.8s;background-color:skyblue; }
 		.nav ul{}
-		.nav ul>li{float: left;width: 20%;height: 40px;text-align: center;line-height: 40px;background-color:skyblue;}
+		.nav ul>li{float: left;width: 20%;height: 60px;text-align: center;line-height: 40px;transition:0.3s;background-color:skyblue;}
 		.nav ul>li:hover{background-color: #000;color:white; }
-		.nav.fixed{position: fixed;top: 0;left: 0;}
+		.nav.fixed{position: fixed;top: 0;left: 0;background-color:blue;}
+		.nav.fixed li{color:white;line-height: 40px;}
 		.viewBox{position: fixed;top: 30px;left: 30px;padding: 10px;background-color:pink;}
 		.top{position: fixed;width: 100px;height: 100px;line-height: 100px;right: 50px;bottom: 50px;border-radius:50px;background-color: #000;color:white;cursor:pointer;text-align: center;opacity:0;transition:0.3s;
 			/*animation-name:viewTop;animation-duration:1s;
