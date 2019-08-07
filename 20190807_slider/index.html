@@ -15,6 +15,22 @@
 		.banner .btn{position: absolute;background-color: #cdcdcd;width: 100%;text-align: center;
 			line-height: 40px;bottom: 10px;}
 	</style>
+	<script>
+		$(document).ready(function(){
+			var current = 0;
+
+			$(".bt_next").click(function(){
+				current++;
+				console.log(current);
+				$(".banner > ul").stop().animate({left:current*1000*-1});
+			});
+			$(".bt_prev").click(function(){
+				current--;
+				console.log(current);
+				$(".banner > ul").stop().animate({left:current*1000*-1});
+			});
+		});
+	</script>
 </head>
 <body>
 	<div class="wrap">
