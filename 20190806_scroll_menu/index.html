@@ -10,13 +10,14 @@
 		body{background-color: #545454;}
 		.wrap{width: 950px;margin:0 auto;padding-bottom:400px;}
 		#top_menu{
-			width: 950px;height: 115px;background-color:rgba(0,0,0,0.5);
+			width: 950px;height: 115px;background-color:#545454;
 			position:fixed;
 		}
 		#top_menu h1{float: left;width: 125px;padding-top:40px;}
 		#top_menu ul.nav{float: right;}
 		#top_menu ul li{float: left;}
-		#top_menu ul li a{display: block;padding:60px 0 0 60px}
+		#top_menu ul li a{display: block;padding:60px 0 0 60px;color:white;}
+		#top_menu ul li.on a{color:red;font-weight:bold;}
 		#contents{padding-top:115px;}
 		img{display: block;}
 	</style>
@@ -33,7 +34,40 @@
 			$(window).scroll(function(){
 				var sct = $(window).scrollTop();
 				console.log("스크롤값:"+sct);
-			});
+
+					// 방법1
+				// 	contents.each(function(index){
+				// if(sct >= contents.eq(0).offset().top-115){
+				// 	menu.removeClass("on");
+				// 	menu.eq(0).addClass("on");
+				// }
+
+				// if(sct >= contents.eq(1).offset().top-115){
+				// 	menu.removeClass("on");
+				// 	menu.eq(1).addClass("on");
+				// }
+
+				// if(sct >= contents.eq(2).offset().top-115){
+				// 	menu.removeClass("on");
+				// 	menu.eq(2).addClass("on");
+				// }
+
+					// 방법2
+			// 	contents.each(function(index){
+			// 		if(sct >= $(this).offset().top-115){
+			// 		// if(sct >= contents.eq(index).offset().top-115){
+			// 		menu.removeClass("on");
+			// 		menu.eq(index).addClass("on");
+			// 	}
+			// });
+					// 방법3
+				for(var i=0;i<3;i++){
+					if(sct >= contents.eq(i).offset().top-115){
+					menu.removeClass("on");
+					menu.eq(i).addClass("on");
+					}
+				}
+			});	
 		});
 	</script>
 
