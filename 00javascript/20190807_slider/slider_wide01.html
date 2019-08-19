@@ -16,15 +16,14 @@
 		.banner>ul>li:nth-child(1){z-index:1;background-color:white;}
 		.banner>ul>li:nth-child(1) .car01{
 			position: absolute;left:50%;top:20%;
-			transform:translate(-50%,-50%);transition:1s;opacity:0;
+			transform:translate(-50%,-50%);
 		}
-		.banner>ul>li:nth-child(1) .car01.move{top:50%;opacity:1;}
 		.banner>ul>li:nth-child(2){background-color:red;}
 		.banner>ul>li:nth-child(2) .car02{
-			position: absolute;left:50%;top:20%;
+			position: absolute;left:10%;top:50%;
 			transform:translate(-50%,-50%);transition:1s;opacity:0;
 		}
-		.banner>ul>li:nth-child(2) .car02.move{top:50%;opacity:1;}
+		.banner>ul>li:nth-child(2) .car02.move{left:50%;opacity:1;}
 		.banner>ul>li:nth-child(3){background-color:blue;}
 		.banner>ul>li:nth-child(4){background-color:gray;}
 		.banner>ul>li:nth-child(5){background-color:green;}
@@ -87,7 +86,7 @@
 				i = current + 1; 
 				if(i==5){
 					current=4;
-					i=0;
+					i=4;
 				}
 				slideView("next");
 				viewNow(); //현재위치
@@ -96,7 +95,7 @@
 				i = current - 1;
 				if(i==-1){
 					current=0;
-					i=4;
+					i=0;
 				}
 				slideView("prev");
 				viewNow();//현재위치
@@ -110,13 +109,17 @@
 				var currentEl = $(".banner > ul > li").eq(current); //current
 				var nextEl = $(".banner > ul > li").eq(i); //current+1
 				pager.removeClass("active").eq(i).addClass("active");
+if(current !=i){
 				if(view == "next"){
+					
 					// currentEl.css({left:0}).stop().animate({left:-1000},1100);
 					nextEl.css({top:"100%","z-index":zI++}).stop().animate({top:0},800);
+					
 				}else{
 					// currentEl.css({left:0}).stop().animate({left:1000},1100);
 					nextEl.css({top:"-100%","z-index":zI++}).stop().animate({top:0},800);
 				}
+}
 				current = i;
 			}
 			$(window).mousewheel(function(event,delta){
@@ -135,9 +138,9 @@
 			function viewNow(){ //현재위치
 				console.log(current);
 				if(current == 0){
-					$(".car01").addClass("move");
+					$(".car01").css({opacity:0}).stop().animate({top:"50%",opacity:1},1000);
 				}else{
-					$(".car01").removeClass("move");
+					$(".car01").stop().animate({top:"60%",opacity:0});
 				}
 				if(current == 1){
 					$(".car02").addClass("move");

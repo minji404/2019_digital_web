@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>effect01</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <script src="../js/jquery-3.3.1.min.js"></script>
+</head>
+<style>
+    .content{
+        width: 400px;background-color: #eee;
+    }
+</style>
+<script>
+    $(document).ready(function(){
+        $(".btn2").hide();
+        $(".btn1").click(function(){
+            $(".box").slideUp(1000,"swing",function(){$(".btn1").hide();
+                                                     $(".btn2").show();});//기본400
+        });
+        $(".btn3").click(function(){
+            $(".box").slideDown(1000,"linear",
+                                function(){
+                $(".btn1").show();
+                $(".btn2").hide();
+                alert("슬라이드다운 되었습니다!!!!");
+            });
+        });
+        $(".btn2").click(function(){
+            $(".box").fadeIn(1000,"swing",function(){$(".btn2").hide();
+                                                        $(".btn1").show();
+                                                    });
+        });
+        $(".btn4").click(function(){
+            $(".box").slideToggle(1000,"linear");
+//            $(".box").toggle();s
+        });
+        $(".btn5").click(function(){
+            $(".box").fadeTo(1000,0.3);
+        }); 
+        $(".btn6").click(function(){
+            $(".box").fadeTo(1000,1);
+        });
+    });
+</script>
+<body>
+    <div>
+        <button class="btn1">slideUp</button>
+        <button class="btn2">fadeIn</button>
+        <button class="btn3">slideDown</button>
+    </div>
+    <div>
+        <button class="btn4">slideToggle</button>
+    </div>
+    <div>
+        <button class="btn5">fadeTo 0.3</button>
+        <button class="btn6">fadeTo 1</button>
+    </div>
+    <div class="box">
+        <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum officia libero amet minus voluptate qui ex nisi voluptas quo, velit magnam autem ducimus, tempore quisquam? Quia praesentium laudantium, minima aliquam voluptate eligendi. Officiis libero modi dolorum nesciunt repellendus labore quasi aperiam consectetur quisquam blanditiis, illo tenetur placeat quam ipsum neque distinctio soluta itaque pariatur! Illum, ipsum, distinctio. Voluptas, vitae sed at consequatur, adipisci possimus totam aliquid maiores soluta laborum a, hic quibusdam. Quas cumque quo dolor ipsa rem quia dolores perspiciatis laborum. Dolore dicta, facere quam incidunt, aut vitae laboriosam dolores quasi modi iure maiores cumque, architecto omnis recusandae consequuntur.</div>     
+    </div>
+    <div style="height: 400px;background: #f00"></div>
+</body>
+</html>
