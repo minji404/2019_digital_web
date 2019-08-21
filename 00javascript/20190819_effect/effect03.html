@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>effect03</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            function move(){
+                $(".box")
+                .animate({marginLeft:200},1000)
+                .animate({marginTop:200},1000)
+                .queue(function(){
+                    $(this).css({backgroundColor:"red"})
+                    $(this).dequeue();
+            })
+                .animate({marginLeft:0},1000)
+                .animate({marginTop:0},1000)
+                .queue(function(){
+                    $(this).css({backgroundColor:"aqua"});
+                    $(this).dequeue();
+                });
+            }
+//            setInterval(move,4000);
+//            move();
+            
+
+                function move1(){
+                    
+//                    $(선택자).is() ~하고있느냐?
+                    if( !$(".box01").is(":animated") ){//애니메이션 재실행 안함 시작.
+                    $(".box01")
+                        .animate({left:470},1000)
+                        .animate({top:470},1000)
+                        .queue(function(){
+                        $(this).css({background:"red"});
+                        $(this).dequeue();
+                        })
+                        .animate({left:0},1000)
+                        .animate({top:0},1000)
+                        .queue(function(){
+                            $(this).css({background:"black"});
+                            $(this).dequeue();
+                
+                        })
+                    }//애니메이션 재실행 안함 끝.
+                }
+                    
+            $(".btn").click(function(){
+                move1();
+            });    
+                
+            
+        });
+    </script>
+    <style>
+        .box{width: 50px;text-align: center;background-color:aqua;}
+        .boxwrap{width: 500px;height: 500px;margin: 0 auto;background-color:skyblue;position: relative;}
+        .box01{width: 30px;height: 30px;border-radius:15px;background-color: #000;position: absolute;}
+        
+    </style>
+</head>
+<body>
+    <div class="box">내용</div>
+    <button class="btn">움직이기</button>
+    
+    <div class="boxwrap">
+        <div class="box01"></div>
+    </div>
+</body>
+</html>
