@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery.mousewheel.min.js"></script>
+</head>
+<style>
+    #wrap{width: 100%;}
+    nav.menu{width: 100%;height: 40px;background-color: #cdcdcd;transition:0.4s;top:-40px;}
+    
+    nav.menu.fixed{position: fixed;top:0;background-color: #000;}
+    nav.menu.fixed a{color:white;}
+    nav.menu>ul{width: 1000px;margin: 0 auto;}
+    nav.menu>ul>li{float: left;width: 20%;}
+    nav.menu>ul>li>a{display: block;text-align: center;line-height: 40px;}
+    .content{height: 3000px;}
+    </style>
+    <script>
+    $(document).ready(function(){
+//       $(window).scroll(function(){  //1시작
+//           var winTop =$(this).scrollTop();
+//           console.log(winTop);
+//           if(winTop>300){
+//               $(".menu").addClass("fixed");
+//           }else{
+//               $(".menu").removeClass("fixed");
+//           }
+//       }) //1끝
+        
+        $(document).mousewheel(function(event,delta){
+            console.log(delta);//delta 마우스 휠 up:양수 down:음수
+            $(window).scroll(function(){
+               var winTop = $(this).scrollTop();
+                if(winTop > 100){//scroll start
+                    if(delta>0){//delta start
+                        $(".menu").addClass("fixed");
+                    }else{
+                        $(".menu").removeClass("fixed");
+                    }//delta end
+                }else{
+                    $(".menu").removeClass("fixed");
+                }//scroll end
+            });
+        });
+    });
+    </script>
+<body>
+    <div class="wrap">
+        <nav class="menu fixed">
+            <ul class="clearfix">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+            </ul>
+        </nav>
+        <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui fugit amet veniam? Dolorum eveniet voluptates ducimus, nihil, eos at nobis nulla animi aspernatur repellat. Odit hic culpa doloribus, incidunt libero commodi amet, ratione quaerat. Architecto quis debitis hic dolore vel nulla ut accusantium soluta sed delectus quaerat ipsum sapiente esse aut eligendi libero in ab error quam facere, minus veritatis dolor incidunt voluptatibus dicta. Ipsa dolorum omnis eligendi, et sunt sint quasi placeat laborum maiores assumenda. Totam iure corporis ipsum nam, veniam sunt maiores ab facilis a nesciunt dolores eos voluptate officia excepturi aut mollitia et cupiditate praesentium, neque rerum placeat! Qui non consequuntur tempora. Incidunt culpa, mollitia. Odio voluptatem omnis voluptas cumque enim harum itaque, minus repellendus pariatur tempora impedit quod vitae, necessitatibus voluptatum quo voluptates vero accusantium odit ullam! Dolores, quas! Magnam rem similique reprehenderit quam qui debitis asperiores, itaque et dolorum, totam quasi quis accusamus illo sapiente ipsum! Consequatur iusto animi officiis consectetur mollitia id recusandae maxime qui odio ab! Eius qui architecto, amet minus nulla sint nihil tenetur, distinctio officia, voluptatibus illo eligendi incidunt facere sunt consectetur similique. Dolorem sapiente assumenda fuga, vero eligendi! Unde quasi praesentium nam laborum et ab quos cumque eius omnis quidem. Ut pariatur rem corporis rerum modi quo, dignissimos obcaecati incidunt explicabo commodi. Ipsum repellendus minus quisquam placeat quas quis itaque voluptatum tempore laborum ducimus iste exercitationem, atque dolorum vero sunt maiores necessitatibus, omnis repellat velit? Facere in eum iure accusantium rerum iste dolores, id quos nostrum, natus, nobis vitae vero, similique voluptas sit cum totam! Reprehenderit reiciendis expedita dolorum vero voluptas quis, magnam earum mollitia. Nam assumenda ipsam maxime alias cum voluptatibus, a deserunt impedit amet sapiente? Similique, et sunt, error delectus asperiores voluptates laboriosam esse labore suscipit aspernatur nemo maxime fugiat, eaque culpa harum voluptate nisi. Sit natus, minus!</div>
+    </div>
+</body>
+</html>
