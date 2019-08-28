@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>full video</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		html,body{width: 100%;height: 100%;}
+		.box01{height:100%;background-color:skyblue;position: relative;overflow: hidden;}
+		.box01 video{position: absolute;top:0;left:0;width:120%;left:50%;top:50%;transform:translate(-50%,-50%)}
+		.box01 img.bg{
+			display: block;
+			position: absolute;
+			width: 100%;height:100%;left:50%;top:50%;
+			transform:translate(-50%,-50%) scale(1);
+			opacity:0.5;}
+		.box02{height: 100%;background-color:green;position: relative;}
+		.box02 iframe{position: absolute;left:0;top:0;
+			width:100%;height:100%;}
+	</style>
+</head>
+<body>
+	<div class="box01">
+		<video autoplay loop  muted poster="../images/jump.png">
+			<source src="scuba.mp4" type="video/mp4" >
+		</video>
+		<img src="bg02.png" alt="배경" class="bg">
+	</div>
+	<div class="box02">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/cPJiPphm8tg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</body>
+</html>

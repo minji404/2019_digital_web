@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>em/rem</title>
+	<style>
+        html{font-size:15px;}
+        body{font-size:10px;}
+        .wrapper{font-size:20px;}/*기준이 20픽셀로 억지로 지정*/
+        h1{font-size:3em;}
+        .txt1{font-size:1.5em;}
+        .txt2{font-size:1em;}
+        .wrapper2 div{font-size:2em;}
+        .wrapper3 div{font-size:2rem;} /* div에 렘을쓰면 알아서 div로적용됨 rem:규칙성이 있슴. 많이들 사용*/
+    </style>
+</head>
+<body>
+	<div class="wrapper">
+	    <h1>3em의 제목</h1>
+        <p class="txt1">1.5em</p>
+        <p class="txt2">1em</p>
+	</div>
+	<div class="wrapper1">
+	    <h1>3em의 제목</h1>
+        <p class="txt1">1.5em</p>
+        <p class="txt2">1em</p>
+	</div>
+	<div class="wrapper2">
+	    <div>2em 20px
+	         <div>2em 40px
+	              <div>2em 80px</div>
+	         </div>
+	    </div>
+	</div>
+	<div class="wrapper3">
+	    <div>2em 16x2=32
+	         <div>1.5em
+	              <div>1.5em</div>
+	         </div>
+	    </div>
+	</div>
+</body>
+</html>
