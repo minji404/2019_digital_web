@@ -9,7 +9,7 @@ $(document).ready(function(){
     });
     
     var cdex=0;
-    var i=$(".sliderImg").length;
+//    var i=$(".sliderImg").length;
     var p;
     setInterval(function(){
         if(cdex<2){
