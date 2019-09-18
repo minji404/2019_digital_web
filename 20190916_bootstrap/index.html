@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>bootstrap</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<style>
+		/*.row > div {height: 100px;}*/
+		.bg-sky{background:skyblue;}
+		.bg-pink{background-color:pink;}
+
+		.h100{height: 100px;}
+		.h200{height: 200px;}
+	</style>
+</head>
+<body>
+	<!-- <div class="container">
+		<div class="row">
+			<div class="col-sm-4 col-md-3 col-lg-6 bg-primary">1</div>
+			<div class="col-sm-4  col-md-3 d-lg-none bg-success">2</div>
+			<div class="col-sm-4  col-md-3 col-lg-6 bg-info">3</div>
+			<div class="d-sm-none d-md-block col-md-3 d-lg-none bg-sky">4</div>
+			--
+			<div class="col-12 col-sm-4 bg-primary p-1">1</div>
+			<div class="col-12 col-sm-4 bg-success">2</div>
+			<div class="col-12 col-sm-4 bg-info">3</div>
+			<div class="col-12 bg-danger">4</div>
+			
+		</div>
+		(설명)
+		fluid::꽉채우다.
+	</div> -->
+
+	<div class="wrap bg-sky">
+		<div class="container bg-info">
+			<div class="row text-white font-weight-bold text-center">
+				<div class="col col-sm-4 col-lg-3 col-xl-6 bg-primary text-center text-lg-left">1</div>
+				<div class="col col-sm-4 col-lg-3 d-xl-none bg-success">2</div>
+				<div class="col col-sm-4 col-lg-3 col-xl-6 bg-info">3</div>
+				<div class="col d-sm-none d-lg-block col-lg-3 d-xl-none bg-danger">4</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="container mt-3">
+		<div class="row bg-pink p-2">
+			<!-- 
+				0-0			 (기준)
+				1-0.25rem 4px(16px)
+				2-0.5rem 8px(16px)
+				3-1rem   16px(16px)
+				4-1.5rem 24px(16px)
+				5-3rem   48px(16px)
+
+			 -->
+			<button type="button" class="btn btn-primary">basic</button>
+			<button type="button" class="btn btn-info ml-2">secondary</button>
+			<button type="button" class="btn btn-success ml-2">success</button>
+			<button type="button" class="btn btn-warning ml-2">warning</button>
+			<button type="button" class="btn btn-danger ml-2">danger</button>
+			<button type="button" class="btn btn-dark ml-2">dark</button>
+			<button type="button" class="btn btn-light ml-2">light</button>
+			<button type="button" class="btn btn-link ml-2">link</button>
+		</div>
+	</div>
+	<div class="container mt-3">
+		<div class="row bg-success p-2 align-items-center h100 align-items-center justify-content-center">
+			<!-- ***align*** 
+			align-items-start /align - items-end / align-items-center
+			align-items-stretch / align - items-baseline
+
+			***justify***
+			justify-content-start / justify-content-end / justify-content-center
+			justify-content-between / justify-content-around
+			-->
+			<a href="#" class="btn btn-primary active btn-lg ">basic</a>
+			<a href="#" class="btn btn-secondary ml-2 active btn-sm">secondary</a>
+		</div>
+	</div>
+	<div class="container mt-3">
+		<div class="row p-2">
+			<!-- 
+				0-0			 (기준)
+				1-0.25rem 4px(16px)
+				2-0.5rem 8px(16px)
+				3-1rem   16px(16px)
+				4-1.5rem 24px(16px)
+				5-3rem   48px(16px)
+
+			 -->
+			<button type="button" class="btn btn-outline-primary">basic</button>
+			<button type="button" class="btn btn-outline-info ml-2">secondary</button>
+			<button type="button" class="btn btn-outline-success ml-2">success</button>
+			<button type="button" class="btn btn-outline-warning ml-2">warning</button>
+			<button type="button" class="btn btn-outline-danger ml-2">danger</button>
+			<button type="button" class="btn btn-outline-dark ml-2">dark</button>
+			<button type="button" class="btn btn-outline-light ml-2">light</button>
+			<button type="button" class="btn btn-outline-link ml-2">link</button>
+		</div>
+	</div>
+	<!-- dropdown menu 순서
+	1.btn-group생성
+	2.submenu dropdown-menu 생성 -> dropdown-item
+	3.dropdown-toggle add
+	4.data-toggle="dropdown" add -->
+	<div class="container">
+		
+			<div class="row">
+				<div class="btn-group ml-auto">
+
+				<div class="btn-group">
+					<a href="#!" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Apple</a>
+					<div class="dropdown-menu">
+						<a href="#!" class="dropdown-item">smenu1</a>
+						<a href="#!" class="dropdown-item">smenu2</a>
+						<a href="#!" class="dropdown-item">smenu3</a>
+					</div>
+				</div>
+				<div class="btn-group">
+					<a href="#!" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Samsung</a>
+					<div class="dropdown-menu">
+						<a href="#!" class="dropdown-item">smenu1</a>
+						<a href="#!" class="dropdown-item">smenu2</a>
+						<a href="#!" class="dropdown-item">smenu3</a>
+					</div>
+				</div>
+
+				<div class="btn-group">
+					<a href="#!" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">LG</a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item">smenu1</a>
+						<a href="#" class="dropdown-item">smenu2</a>
+						<a href="#" class="dropdown-item">smenu3</a>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark col-12">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+	<div class="bg-dark">
+		<div class="container">
+			<div class="row">
+				<nav class="navbar navbar-expand navbar-dark col-12">
+					<a href="#!" class="navbar-brand">logo</a>
+					<button type="button">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active">
+								<a href="#!" class="nav-link">Home <span class=""></span></a>
+							</li>
+							<li class="nav-item">
+								<a href="#!" class="nav-link">link2</a>
+							</li>
+							<li class="nav-item">
+								<a href="#!" class="nav-link">link3</a>
+							</li>
+						</ul>
+					</div>
+					<a href="#!" class="nav-link text-white">link1</a>
+					<a href="#!" class="nav-link">link2</a>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Lorem ipsum.</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, corporis?</p>
+		</div>
+	</div>
+</body>
+</html>
