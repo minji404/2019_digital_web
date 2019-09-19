@@ -203,5 +203,71 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, corporis?</p>
 		</div>
 	</div>
+
+	
+	<style>
+		
+	</style>
+	<div class="wrap bg-sky mt-3">
+		<div class="container">
+			<nav class="navbar navbar-expand-md navbar-dark">
+				<a href="#!" class="navbar-brand">logo</a>
+
+				<button type="button">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active">
+								<a href="#!" class="nav-link">Home <span class=""></span></a>
+							</li>
+							<li class="nav-item">
+								<a href="#!" class="nav-link">link2</a>
+							</li>
+							<li class="nav-item">
+								<a href="#!" class="nav-link">link3</a>
+							</li>
+
+
+							 <li class="nav-item dropdown">
+						        <a class="nav-link text-white" href="#" id="dm1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						          link4
+						        </a>
+						        <div class="dropdown-menu dropdown-menu-right menu" aria-labelledby="dm1">
+						          <a class="dropdown-item" href="#">Action</a>
+						          <a class="dropdown-item" href="#">Another action</a>
+						          <div class="dropdown-divider"></div>
+						          <a class="dropdown-item" href="#">Something else here</a>
+						        </div>
+						      </li>
+						</ul>
+					</div>
+			</nav>
+		</div>
+	</div>
+	<script>
+		$(".navbar-nav>li.nav-item.dropdown").mouseover(function(){
+			$(".dropdown-menu.menu").addClass("show");
+		});
+		$(".navbar-nav>li.nav-item.dropdown").mouseout(function(){
+			$(".dropdown-menu.menu").removeClass("show");
+		});
+	</script>
+	<div class="wrap">
+		<div class="container">
+			<div class="jumbotron">
+			  <h1>Hello, world!</h1>
+			  <p>This is a simple hero unit, a simple jumbotron-style component for
+			                  calling extra attention to featured content or information.</p>
+			  <hr class="my-2">
+			  <p>It uses utility classes for typography and
+			     spacing to space content out within the larger container.</p>
+			  <p>
+			    <a class="btn btn-primary btn-lg" href="#!" role="button">Some action</a>
+			  </p>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>
