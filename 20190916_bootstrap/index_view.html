@@ -6,9 +6,12 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Bootstrap homepage</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<script src="../js/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/wow.js"></script>
+
 	<style>
 		.header_wrap{
 			background:url(images/bg-top.jpg)no-repeat center top;
@@ -16,6 +19,9 @@
 		}
 		.gray{background-color: #f0f1f4;}
 	</style>
+	<script>
+		new WOW().init();
+	</script>
 </head>
 <body>
 	<div class="header_wrap pb-5">
@@ -56,7 +62,7 @@
 	<section class="py-5">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-5 text-center text-md-left">
+				<div class="col-md-5 text-center text-md-left wow bounce">
 					<h2>Lorem ipsum dolor sit.</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nostrum!</p>
 					<a href="#!" class="btn btn-primary mt-3 d-block d-md-inline">more</a>
@@ -65,5 +71,89 @@
 			</div>
 		</div>
 	</section>
+	<section class="gray py-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 text-center text-md-left ">
+					<h2>Lorem ipsum dolor sit amet.</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, ratione.</p>
+					<a href="#!" class="btn btn-primary d-block d-md-inline">more</a>
+				</div>
+				<div class="col-md-7 mt-5 mt-md-0 wow bounceIn">
+					<img src="images/home-panel-3.jpg" alt="" class="w-100">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="py-5">
+		<div class="container wow bounceInLeft">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="images/envelope-icon.jpg" style="float:left;" alt="" class="mr-3">
+					<h2>Lorem ipsum.</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, totam.</p>
+				</div>
+				<div class="col-md-6 clearfix text-left text-md-center mt-5 mt-md-0 d-none d-md-block">
+					<img src="images/lock-icon.jpg" style="float:left;" alt="" class="float-left float-md-none mr-3">
+					<h2>Lorem ipsum.</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, totam.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="bg-dark text-light text-center py-5 d-none d-md-block">
+		<div class="container">
+			<div class="row">
+				<div class="col-2">
+					<h3>123</h3>
+					TODAY UPLOADS
+				</div>
+				<div class="col-2">
+					<h3>123</h3>
+					TODAY UPLOADS
+				</div>
+				<div class="col-4">
+					<h3>클릭하세요</h3>
+					<!-- <a href="#myModal" class="btn btn-danger mt-3" data-toggle="modal">sign up now</a> -->
+					<button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-danger mt-3">SIGN UP NOW</button>
+				</div>
+				<div class="col-2">
+					<h3>123</h3>
+					TODAY UPLOADS
+				</div>
+				<div class="col-2">
+					<h3>123</h3>
+					TODAY UPLOADS
+				</div>
+			</div>
+		</div>
+	</div>
+<footer>
+	<div class="container">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur fugiat saepe libero accusamus veritatis voluptatibus. Tempora, illum debitis omnis mollitia fuga corrupti repellat. Sed quam ipsam, reiciendis aut temporibus dolorum.</p>
+	</div>
+</footer>
+
+	<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque aut quis assumenda consectetur quae in sed vel praesentium! Voluptatem, sapiente.
+        <img src="../images/testimg.jpg" alt="" class="w-100 mt-3">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
